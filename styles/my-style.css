@@ -1,6 +1,46 @@
-body {
+body
+{
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
+}
+.grid-item1
+{
+    grid-area: myHeader;
+    background-color: rgb(142, 116, 255);
+}
+.grid-item2 
+{
+    grid-area: hero;
+    background-color: rgb(252, 255, 78);
+}
+.grid-item3
+{
+    grid-area: myAd;
+    background-color: rgb(255, 111, 183);
+}
+.grid-item4
+{
+    grid-area: myMain;
+    background-color: rgb(68, 255, 140);
+}
+.grid-item5 
+{
+    grid-area: sidebar;
+    background-color: rgb(250, 182, 118);
+}
+.grid-item6 
+{
+    grid-area: myFooter;
+    background-color: rgb(92, 255, 233);
+}
+    
+.grid-container
+{
+    grid-template-areas:
+        'myHeader myHeader myHeader'
+        'hero hero myAd'
+        'myMain myMain sidebar'
+        'myFooter myFooter myFooter';
 }
 
 h1 {
