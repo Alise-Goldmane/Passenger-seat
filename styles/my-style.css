@@ -2,50 +2,51 @@ body
 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
-}
+    height: 100vh;
+    display: grid;
+    margin-top: 3px;
+    margin-bottom: 3px;
 
-.box 
-{
-    background-color:blanchedalmond; /* ievietot fona attēlu krāsas vietā?*/
 }
 
 .grid-container
 {
     display: grid;
     /*width: auto;
-    height: 750px;*/
+    height: auto;*/
     grid-template-areas:
-        'myHeader myHeader myHeader'
-        'myHeader myHeader myHeader'
-        'hero hero myAd'
-        'hero hero myAd'
-        'myMain myMain sidebar'
-        'myMain myMain sidebar'
-        'myFooter myFooter myFooter';
-    padding: 5px;
-    grid-template-columns: [col-start] 1fr 1fr 1fr [col-end];
-    grid-template-rows: repeat(7, minmax(50px, auto));
-    gap: 10px;
+        'myHeader myHeader myHeader myHeader'
+        'myHeader myHeader myHeader myHeader'
+        'hero hero hero myAd'
+        'hero hero hero myAd'
+        'myMain myMain myMain sidebar'
+        'myMain myMain myMain sidebar'
+        'myFooter myFooter myFooter myFooter';
+    padding: 10px;
+    grid-template-columns: [col-start] 1fr 1fr 1fr 1fr [col-end];
+    grid-template-rows: repeat(7, minmax(20px, auto));
+    gap: 20px;
 }
-/*media query mēģinājumi*/
-/*mobile
-@media (min-width: 400px)
+
+/*mobile*/
+/*
+@media screen and (max-width: 400px)
 {
     .grid-containter
     {   
-        grid-template-rows: auto auto 1fr auto auto;
-        grid-template-areas:
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        /*grid-template-areas:
         'myHeader'
         'hero'
         'myMain'
-        'sidebar'
         'myFooter';
-        
     }
 }
-
+*/
 /*tablet
-@media (min-width: 576px)
+@media (min-width: 576px) and (max-width:992)
 {
     .grid-container
     {
@@ -79,62 +80,76 @@ body
 .grid-item1
 {
     display: grid;
-    grid-column: 1 / 3;
+    grid-column: 1 / 4;
     grid-row: 2 / 2;
     grid-area: myHeader;
     background-color:rgb(138, 208, 230);
     padding: 10px;
-    border: 3px solid white;
     grid-template-columns: subgrid;
     grid-template-rows: subgrid;
 }
 
 .sub-header1
 {
-    grid-column: 1/3;
+    text-align: center;
     grid-column-start: 1;
     grid-column-end: 1;
     background-color: rgb(232, 250, 255);
-    padding: 5px;
+    padding: 10px;
     gap: 20px;
+}
+
+.sub-header1:hover
+{
+    background-color: rgb(255, 242, 58);
 }
 
 .sub-header2
 {
-    grid-column: 2/3;
+    text-align: center;
     grid-column-start: 2;
-    grid-column-end: 2;
+    grid-column-end: 4;
     background-color: rgb(232, 250, 255);
-    padding: 5px;
+    padding: 10px;
     gap: 20px;
+}
+
+.sub-header2:hover
+{
+    background-color: rgb(255, 242, 58);
 }
 
 .sub-header3
 {
-    grid-column: 3/3;
-    grid-column-start: 3;
-    grid-column-end: 3;
+    text-align: center;
+    grid-column-start: 4;
+    grid-column-end: 4;
     background-color: rgb(232, 250, 255);
-    padding: 5px;
+    padding: 10px;
     gap: 20px;
+}
+
+.sub-header3:hover
+{
+    background-color: rgb(255, 242, 58);
 }
 
 .grid-item2 
 {
     display: grid;
-    grid-column: 1/2;
-    grid-row: 3/3;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    grid-column: 1/3;
+    grid-row: 3/4;
     grid-area: hero;
     background-color:rgb(138, 208, 230);
     padding: 10px;
-    border: 3px solid white;
     grid-template-columns: subgrid;
     grid-template-rows: subgrid;
   }
   
   .sub-item1
   {
-    grid-column: 1/1;
     grid-column-start: 1;
     grid-column-end: 1;
     background-color: rgb(232, 250, 255);
@@ -142,14 +157,23 @@ body
     gap: 20px;
   }
 
+  .sub-item1:hover
+{
+    background-color: rgb(255, 242, 58);
+}
+
   .sub-item2
   {
-    grid-column: 2/2;
     grid-column-start: 2;
-    grid-column-end: 2;
+    grid-column-end: 4;
     background-color: rgb(232, 250, 255);
     padding: 10px;
     gap: 20px;
+  }
+
+  .sub-item2:hover
+  {
+    background-color: rgb(255, 242, 58);
   }
 
 .grid-item3
@@ -157,62 +181,86 @@ body
     grid-area: myAd;
     background-color: rgb(243, 66, 66);
     padding: 10px;
-    border: 3px solid white;
 }
 .grid-item4
 {
     display: grid;
-    grid-column: 1/2;
-    grid-row: 4/4;
+    grid-column: 1/3;
+    grid-row: 5/6;
     grid-area: myMain;
     background-color:rgb(138, 208, 230);
     padding: 10px;
-    border: 3px solid white;
     grid-template-columns: subgrid;
     grid-template-rows: subgrid;
 
 }
 .sub-main1
 {
-    grid-column: 1/1;
     grid-column-start: 1;
-    grid-column-end: 1;
-    background-color: rgb(232, 250, 255);
-    padding: 10px;
-    gap: 20px;
-}
-.sub-main2
-{
-    grid-column: 2/2;
-    grid-column-start: 2;
-    grid-column-end: 2;
+    grid-column-end: 3;
     background-color: rgb(232, 250, 255);
     padding: 10px;
     gap: 20px;
 }
 
+.sub-main1:hover
+{
+    background-color: rgb(255, 242, 58);
+}
+
+.sub-main2
+{
+    grid-column-start: 4;
+    grid-column-end: 4;
+    background-color: rgb(232, 250, 255);
+    padding: 10px;
+    gap: 20px;
+}
+
+.sub-main2:hover
+{
+    background-color: rgb(255, 242, 58);
+}
+
 .grid-item5 
 {
+    display: grid;
+    grid-column: 4/4;
+    grid-row: 5/6;
     grid-area: sidebar;
     background-color:rgb(138, 208, 230);
     padding: 10px;
-    border: 3px solid white;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
 }
 
 .sub-sidebar1
 {
     background-color: rgb(232, 250, 255);
-  padding: 10px;
-  gap: 20px;
+    padding: 10px;
+    gap: 20px;
+}
+
+.sub-sidebar1:hover
+{
+    background-color: rgb(255, 242, 58);
 }
 
 .grid-item6 
 {
+    display: grid;
+    height:fit-content;
     grid-area: myFooter;
     background-color:rgb(138, 208, 230);
     padding: 10px;
-    border: 3px solid white;
 }
+/*
+@media screen and (max-width: 500px) {
+    .body
+    {   
+      flex-direction: column;
+    }
+*/
 
 h1 {
     color:black;
