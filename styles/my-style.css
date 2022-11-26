@@ -19,7 +19,7 @@ body
         'myHeader myHeader myHeader myHeader'
         'myHeader myHeader myHeader myHeader'
         'hero hero hero myAd'
-        'hero hero hero myAd'
+        'hero hero hero sidebar'
         'myMain myMain myMain sidebar'
         'myMain myMain myMain sidebar'
         'myFooter myFooter myFooter myFooter';
@@ -119,15 +119,24 @@ body
     background-color: rgb(255, 242, 58);
   }
 
+.sub-main-ad
+{
+    display:none
+}
+
 .grid-item3
 {
+    height:fit-content;
     display: grid;
-    height: auto;
     grid-area: myAd;
-    background-color: rgb(243, 66, 66);
-    padding: 10px;
-    gap: 10px;
 }
+
+.grid-item3 img
+{
+    vertical-align: top;
+    width: 450px;
+}
+
 .grid-item4
 {
     display: grid;
@@ -167,6 +176,7 @@ body
 {
     display: grid;
     height:auto;
+    align-content: start;
     grid-area: sidebar;
     background-color:rgb(138, 208, 230);
     padding: 10px;
@@ -209,9 +219,9 @@ body
         'hero hero hero'
         'hero hero hero'
         'hero hero hero'
-        'myMain myMain myAd'
-        'myMain myMain myAd'
-        'myMain myMain myAd'
+        'myMain myMain myMain'
+        'myMain myMain myMain'
+        'myMain myMain myMain'
         'sidebar sidebar sidebar'
         'sidebar sidebar sidebar'
         'myFooter myFooter myFooter';
@@ -309,12 +319,9 @@ body
 
 .grid-item3
 {
-    display: grid;
-    grid-area: myAd;
-    background-color: rgb(243, 66, 66);
-    padding: 10px;
-    gap: 10px;
+    display:none
 }
+
 .grid-item4
 {
     display: grid;
@@ -342,11 +349,27 @@ body
     grid-row-start: 3;
     background-color: rgb(232, 250, 255);
     padding: 10px;
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
 
 .sub-main2:hover
 {
     background-color: rgb(255, 242, 58);
+}
+
+.sub-main-ad
+{
+    display: grid;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end:4;
+}
+.sub-main-ad img
+{
+    display: inline;
+    max-width:100%;
+    max-height:100%;
 }
 
 .grid-item5 
@@ -391,14 +414,14 @@ body
 {
     .grid-container
     {   
-        /*display: grid;*/
+        display: grid;
         grid-template-areas:
         'myHeader myHeader'
         'myHeader myHeader'
         'myHeader myHeader'
-        'hero hero hero'
-        'hero hero hero'
-        'myAd myAd'
+        'hero hero'
+        'hero hero'
+        'myMain myMain'
         'myMain myMain'
         'myMain myMain'
         'myMain myMain'
@@ -471,7 +494,7 @@ body
     grid-area: hero;
     background-color:rgb(138, 208, 230);
     padding: 10px;
-    gap: 10px;
+    gap: 5px;
   }
   
   .sub-item1
@@ -491,22 +514,19 @@ body
     background-color: rgb(255, 242, 58);
   }
 
-  .grid-item3
+.grid-item3
 {
-    grid-area: myAd;
-    background-color: rgb(243, 66, 66);
-    padding: 10px;
-    gap: 10px;
+    display: none;
 }
 
 .grid-item4
 {
+    display: grid;
     height:fit-content;
     grid-area: myMain;
     background-color:rgb(138, 208, 230);
     padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    gap: 5px;
 
 }
 .sub-main1
@@ -522,9 +542,22 @@ body
     background-color: rgb(255, 242, 58);
 }
 
+.sub-main-ad
+{
+    display: grid;
+    grid-row-start: 3;
+    margin-bottom: 5px;
+}
+.sub-main-ad img
+{
+    display: inline;
+    max-width:100%;
+    max-height:100%;
+}
+
 .sub-main2
 {
-    grid-row-start: 1;
+    grid-row-start: 4;
     background-color: rgb(232, 250, 255);
     padding: 10px;
 }
@@ -546,7 +579,7 @@ body
     grid-area: myFooter;
     background-color:rgb(138, 208, 230);
     padding: 10px;
-    gap: 10px;
+    margin-top: 5px;
 }
 
 }
