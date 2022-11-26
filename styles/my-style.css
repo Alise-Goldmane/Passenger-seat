@@ -34,8 +34,6 @@ body
 {
     display: grid;
     height:fit-content;
-    grid-column: 1 / 4;
-    grid-row: 2 / 2;
     grid-area: myHeader;
     background-color:rgb(138, 208, 230);
     padding: 10px;
