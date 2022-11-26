@@ -8,6 +8,8 @@ body
     grid-gap: 10px;
 }
 
+
+
 /*desktop resolution start*/
 
 @media (min-width: 992px)
@@ -199,6 +201,7 @@ body
 .grid-item6 
 {
     display: grid;
+    text-align: center;
     height: auto;
     grid-area: myFooter;
     background-color:rgb(138, 208, 230);
@@ -398,7 +401,8 @@ body
 .grid-item6 
 {
     display: grid;
-    height:fit-content;
+    text-align: center;
+    height: fit-content;
     grid-area: myFooter;
     background-color:rgb(138, 208, 230);
     padding: 10px;
@@ -575,6 +579,7 @@ body
 .grid-item6 
 {
     display: grid;
+    text-align: center;
     height:fit-content;
     grid-area: myFooter;
     background-color:rgb(138, 208, 230);
@@ -585,9 +590,10 @@ body
 }
 /*smartphone resolution end*/
 
-h1 {
-    color:black;
-}
 h2 {
     color:black;
 }
+h4 {
+    color:rgb(17, 19, 20);
+}
+
