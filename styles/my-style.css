@@ -37,7 +37,7 @@ body
     grid-area: myHeader;
     background-color:rgb(138, 208, 230);
     padding: 10px;
-    grid-template-columns: subgrid;
+    gap: 10px;
 }
 
 .sub-header1
@@ -96,7 +96,7 @@ body
     grid-area: hero;
     background-color:rgb(138, 208, 230);
     padding: 10px;
-    grid-template-columns: subgrid;
+    gap: 10px;
   }
   
   .sub-item1
@@ -134,7 +134,7 @@ body
     grid-area: myAd;
     background-color: rgb(243, 66, 66);
     padding: 10px;
-    grid-template-columns: subgrid;
+    gap: 10px;
     
 }
 .grid-item4
@@ -146,7 +146,7 @@ body
     grid-area: myMain;
     background-color:rgb(138, 208, 230);
     padding: 10px;
-    grid-template-columns: subgrid;
+    gap: 10px;
 
 }
 .sub-main1
